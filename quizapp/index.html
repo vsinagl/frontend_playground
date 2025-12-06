@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="style.css" rel="stylesheet">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<div class="container active" id="screen-intro"> 
+		<div class="screen intro">	
+			<h1> Welcome to Knowledge Quiz </h1>
+			<button id='btn-start' class="btn-start"> Start Quiz!</button>
+
+		</div>
+	</div>
+
+	<div id='screen-quiz' class="container">
+
+		<div  class="screen answers">
+			<h2 id="question-text"> Here goes a question </h2>
+			<div class="answer-status">
+				<p>
+					Question <span id="current-question" class="current answer"> 1</span> of <span id="total-questions" class="total-asnwers"> 5 </span>
+				</p>
+				<p>
+					Your score: <span id='current-score' class="score">0</span> of <span id='total-score' class="total-score"> 5 </span>
+				</p>
+
+			</div>
+			<div id='container-questions' class="container-questions">
+				<button class="btn-question"> question 1 </button>
+				<button class="btn-question"> question 2 </button>
+				<button class="btn-question"> question 3 </button>
+				<button class="btn-question incorrect"> question 4 </button>
+				<button class="btn-question correct"> question 5 </button>
+			</div>
+
+			<div class="progress-bar">
+				<div id='progress' class="progress"> </div>
+			</div>
+
+		</div>
+	</div>
+
+	<div id='screen-result' class="container">
+
+		<div class="screen result">
+			<h1> Quiz Completed! </h1>
+				<div class ="result-score"> 
+				<p class="final-score"> Your final score is: <span id="final-score"> 0 </span> of <span id="max-score"> 5 </span> </p>
+				<h2> Well Done ! </h2>
+			</div>
+			<button id ='restart' class="btn-start"> Restart Quiz! </button>
+		</div>
+	</div>
+	
+	<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+- question: "In what year was Volkswagen founded?"
+  options:
+    - "1927"
+    - "1937"
+    - "1947"
+    - "1957"
+  answer: "1937"
+
+- question: "Which Volkswagen model became famous as the 'people's car' and one of the best-selling cars of all time?"
+  options:
+    - "Golf"
+    - "Polo"
+    - "Passat"
+    - "Beetle"
+  answer: "Beetle"
+
+- question: "What does the name 'Volkswagen' literally translate to in English?"
+  options:
+    - "Fast car"
+    - "People's car"
+    - "Worker's car"
+    - "Family car"
+  answer: "People's car"
+
+- question: "Which Volkswagen model is widely credited with creating the modern hot hatch segment?"
+  options:
+    - "Golf GTI"
+    - "Scirocco"
+    - "Passat CC"
+    - "Arteon"
+  answer: "Golf GTI"
+
+- question: "What does 'AG' stand for in Volkswagen AG?"
+  options:
+    - "Aktiengesellschaft (a joint-stock company)"
+    - "Auto Gruppe"
+    - "Allgemeine Gesellschaft"
+    - "Automobile Group"
+  answer: "Aktiengesellschaft (a joint-stock company)"
+
+- question: "Which of following companies does not belong to the Volkswagen Group?"
+  options:
+    - "Bentley"
+    - "Buggati"
+    - "Scania"
+    - "Opel"
+    - "Lamborghini"
+  answer: "Opel"
