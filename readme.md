@@ -1,6 +1,6 @@
 # Project introduction
 
-- this repository demo project that I did mainly for refreshing some basic knowledge of html, css and javascript developement. For some of them, I develope also backend server, mostly using python (http.server)
+- this repository contains some small projects that I did mainly for training and refreshing basic knowledge of html, css and javascript developement. For some of them, I developed also backend server, mostly using python (http.server) or flask.
 
 ## List of projects currently:
 1. Quizapp
