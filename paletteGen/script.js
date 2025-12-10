@@ -1,6 +1,7 @@
 
 const containerColors = document.getElementById("container-colors")
 const generateBtn = document.getElementById("btn-generate")
+const colorBoxes = containerColors.querySelectorAll(".color-box")
 
 
 generateBtn.addEventListener("click", generateColors)
@@ -13,7 +14,6 @@ generateColors()
 
 function generateColors(){
 	//getting color boxes and generating random colors based on color boxes lenght
-	const colorBoxes = containerColors.querySelectorAll(".color-box")
 	const colors = getRandomColors(colorBoxes.length)
 
 	let i = 0;
@@ -45,4 +45,20 @@ function getRandomColor(){
 
 }
 
-// --------------------------------------------------------------------
+// ------- COPY COLOR CODE -----------------------------------------------------
+
+
+containerColors.addEventListener("click", (event) => {
+	if (event.target.classList.contains("copy-btn")){
+		const hexValue = event.target.previousElementSibling.textContent
+		navigator.clipboard.writeText(hexValue)
+		event.target.classList.remove('fa', 'fa-copy')
+		event.target.classList.add("fa-solid", "fa-check-double")
+		setTimeout(() => {
+			event.target.classList.remove("fa-solid", "fa-check-double")
+			event.target.classList.add('fa', 'fa-copy')
+
+		}, 800)
+	}
+	console.log("clipboard: ", navigator.clipboard.readText())
+})
