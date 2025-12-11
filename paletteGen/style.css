@@ -32,6 +32,7 @@ body{
   /* box-shadow: 0 10px  rgba(0, 0, 0, 0.3); */
 }
 
+
 .container-main h1{
   text-align: center;
   font-size: 2rem;
@@ -53,6 +54,18 @@ body{
   margin-bottom: 1.5rem;
 }
 
+.container-basecolor{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: auto;
+  gap:10px;
+}
+
+.btn-golden-ratio{
+  font-size: 25px;
+}
+
 .btn-generate{
   margin-bottom: 1rem;
   padding: 1rem 2rem;
@@ -68,6 +81,47 @@ body{
   transition: ease 0.2s;
 }
 
+.container-color-selection{
+  padding: 0.5rem 1rem
+}
+
+.btn-colorpicker{
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background: linear-gradient(60deg,rgb(165, 248, 252), rgb(56, 143, 249));
+  border-width: 0px;
+}
+.btn-colorpicker:hover{
+  transform: translateY(-2px);
+  transform: translateX(-2px);
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.2);
+  transition: ease 0.2s;
+}
+
+.colorpicker{
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  padding: 0.4rem 1rem;
+  max-width: 120px;
+  background: white;
+  /* background: linear-gradient(60deg,rgb(165, 248, 252), rgb(56, 143, 249)); */
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+  border-width: 0px;
+  border-radius: 5px;
+}
+
+.colorpicker:hover{
+  box-shadow: 1px 1px 8px rgba(2, 85, 188, 0.8);
+  border-width: 0px;
+  transition: ease 0.2s;
+}
+
+.colorpicker:focus{
+  outline: none;
+  box-shadow: 1px 1px 8px rgba(2, 85, 188, 0.8);
+  
+}
 
 
 .container-color{
@@ -116,6 +170,40 @@ body{
   .color-box{
     height: 120px;
   }
+}
+
+
+.toggle-header {
+  display: flex;
+  max-width: 360px;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px;
+  font-size: 20px;
+}
+
+/* Arrow animation */
+.arrow {
+  font-size: 2rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* Content (hidden by default) */
+.toggle-content {
+  max-height: 0px;
+  overflow: hidden;
+  font-size: 16px;
+  margin-left: 20px;
+  transition: all 0.4s ease;
+}
+
+.toggle.active .arrow {
+  transform: rotate(90deg);
+}
+
+.toggle.active .toggle-content {
+  max-height: 200px; /* Shows the content of toggle-content div*/
 }
 
 

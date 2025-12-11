@@ -16,6 +16,32 @@
 <body>
 	<div id="container-main" class="container-main">
 		<h1> Color Palette Generator</h1>
+		<div id="container-basecolor" class="container-basecolor">
+		<!-- <i id="btn-golden-ratio" class="fa-solid fa-toggle-off btn-golden-ratio"> </i>
+		<h2> Generate from base color ? </h2> -->
+
+		<div class="toggle">
+  			<div class="toggle-header">
+    			<span class="arrow">›</span>
+    			<span class="toggle-title">Generate palette from base color ?</span>
+  			</div>
+
+  			<div class="toggle-content">
+				<div id='container-color-selection' class="container-color-selection">
+					Select base color for generating palett in golden ratio:
+					<input id='colorpicker' class=colorpicker>
+
+					</input>
+					<!-- <button id="btn-colorpicker" class="btn-colorpicker">Select</button> -->
+					<div class=colorpicker-color>
+
+					</div>
+				</div>
+  			</div>
+		</div>
+
+
+		</div>
 		<button id="btn-generate" class="btn-generate"><i class="fa-solid fa-arrows-rotate"></i> Generate </button>
 		<div id="container-palette" class="container-palette">
 			<div id="container-colors" class="container-color">
@@ -55,11 +81,7 @@
 					</div>
 				</div>
 			</div>
-
-
 		</div>
-
-
 	</div>
 	
 	<script src="script.js"> </script>
