@@ -25,12 +25,15 @@ function generateColors(){
     const pickerValue = colorPicker.value;
 
 	if (pickerValue != null && pickerValue != null && isHexColor(pickerValue.trim())){
-		colors = getGoldenRatioColors(colorPicker.value, colorBoxes.length)
+		colors = getGoldenRatioColors(hexToHSL(colorPicker.value), colorBoxes.length)
+        console.log("------COLORS--------")
+        console.log(colors)
 
 	    let i = 0;
 	    for (const box of colorBoxes) {
 		    const hexValue = box.querySelector(".color-value")
-		    hexValue.textContent = colors[i].hsl;
+            console.log(hslToHex(colors[i]))
+		    hexValue.textContent = hslToHex(colors[i]);
 		    box.style.backgroundColor = colors[i].hsl;
 		    i++;
     	}
@@ -71,9 +74,9 @@ function getRandomColor(){
 // -- COLORS FROM GOLDEN RATIO -------------------------------
 
 //HSL generator
-
 function hexToHSL(hex) {
 
+    console.log('hsl generating: ',hex)
     hex = hex.replace("#", "");
 
 	//extracting rgb values
@@ -120,9 +123,53 @@ function hexToHSL(hex) {
     return { h, s, l, hsl: `hsl(${h}, ${s}%, ${l}%)` };
 }
 
+function hslToHex(hslObj) {
+    const h = hslObj.h;
+    const s = hslObj.s / 100;
+    const l = hslObj.l / 100;
+    
+    const c = (1 - Math.abs(2 * l - 1)) * s;
+    const x = c * (1 - Math.abs((h / 60) % 2 - 1));
+    const m = l - c / 2;
+    
+    let r = 0, g = 0, b = 0;
+    
+    if (h >= 0 && h < 60) {
+        r = c; g = x; b = 0;
+    } else if (h >= 60 && h < 120) {
+        r = x; g = c; b = 0;
+    } else if (h >= 120 && h < 180) {
+        r = 0; g = c; b = x;
+    } else if (h >= 180 && h < 240) {
+        r = 0; g = x; b = c;
+    } else if (h >= 240 && h < 300) {
+        r = x; g = 0; b = c;
+    } else if (h >= 300 && h < 360) {
+        r = c; g = 0; b = x;
+    }
+    
+    // Convert to 0-255 range
+    r = Math.round((r + m) * 255);
+    g = Math.round((g + m) * 255);
+    b = Math.round((b + m) * 255);
+    
+    // Convert to hex
+    const toHex = (n) => {
+        const hex = n.toString(16);
+        return hex.length === 1 ? '0' + hex : hex;
+    };
+    
+    return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+}
+
 
 function getGoldenRatioColors(baseColor, depth=0, colors=[]){
-const goldenRotation = 137.5; 
+    colors.push(baseColor)
+    if (depth == 0){
+        return colors;
+    }
+
+    const goldenRotation = 137.5; 
 
     const newH = (baseColor.h + goldenRotation) % 360;
     const newS = baseColor.s;
@@ -135,10 +182,9 @@ const goldenRotation = 137.5;
         hsl: `hsl(${newH}, ${newS}%, ${newL}%)`
     };
 
-    colors.push(newColor);
-    if (depth > 0) {
-        getGoldenRatioColors(newColor, depth - 1, colors);
-    }
+    console.log('GRC: newcolor= ', newColor)
+    // colors.push(newColor);
+    getGoldenRatioColors(newColor, depth - 1, colors);
 	
 	return colors
 }
