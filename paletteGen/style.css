@@ -50,7 +50,8 @@ body{
   width: 70%;
   bottom: 0;
   left: 15%;
-  background-color: rgb(164, 12, 164);
+  background-color: rgb(164, 12, 164); */
+  /* background-color: #099b0f; */
   margin-bottom: 1.5rem;
 }
 
@@ -72,6 +73,7 @@ body{
   border-radius: 2rem;
   border-width: 0;
   background: linear-gradient(60deg,rgb(165, 248, 252), rgb(56, 143, 249));
+  /* background: linear-gradient(60deg,#78a40c 20%, #099b0f); */
 }
 
 .btn-generate:hover{
@@ -89,6 +91,7 @@ body{
   margin-left: 0.5rem;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
+  /* background: linear-gradient(60deg,#aefc5a, #5eb603); */
   background: linear-gradient(60deg,rgb(165, 248, 252), rgb(56, 143, 249));
   border-width: 0px;
 }
