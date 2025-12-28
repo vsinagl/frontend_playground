@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/*smoot text rendering*/
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	min-height: 100vh;
+  	font-family: "Nunito", sans-serif;
+	/* min-height: 100vh; */
+	padding: 1rem;
+  	font-family: "Nunito", sans-serif;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container{
+	padding:2rem;
+	margin: 0;
+
+	width:100%;
+	max-width: 1200px;
+}
+
+.container h1{
+	color: #172B4D;
+	text-align: center;
+
+}
+
+.container h2{
+	color: #172B4D;
+}
+
+.board{
+	padding-top: 1.5rem;
+	/* element positioning */
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	gap:20px
+	/* visual */
+
+}
+
+.board-box{
+	max-width: 100%;
+	min-width: 200px;
+	width: 30%;
+	padding:1rem;
+
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	flex-direction: column;
+
+	/*visual */
+	background-color: #F4F5F7;
+  	box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	min-height: 70vh;
+
+}
