@@ -60,6 +60,11 @@ body{
 	padding-top: 2rem;
 }
 
+a{
+	color: var(--primary-color-2);
+	text-decoration: none;
+}
+
 input:focus{
 	outline: none;
 	box-shadow: 4px 4px 4px rgb(from var(--blue) r g b / 0.2);

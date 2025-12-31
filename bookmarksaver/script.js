@@ -34,10 +34,14 @@ function addBookmark(){
 	const length = list.children.length;
 	const newBookmark = bookmark.cloneNode(true)
 	const removeButton = remove.cloneNode(true)
-	removeButton.addEventListener("click",removeBookmark)
 	//cleaning content of bookmark -> we will add all content programatically
 	newBookmark.innerHTML = ""
 	newBookmark.id = "newBookmark" + "-" + length;
+	//remove button on click function
+	// removeButton.addEventListener("click",removeBookmark(newBookmark.id))
+	removeButton.addEventListener("click", ()=>{
+		list.removeChild(newBookmark);
+	})
 
 	const newBookmarkLink = document.createElement("a")
 	newBookmarkLink.textContent = name
@@ -52,6 +56,6 @@ function addBookmark(){
 }
 
 
-function removeBookmark(){
-	throw Exception("Not Implemented")
+function removeBookmark(id){
+	console.log("id: ", id)
 }
